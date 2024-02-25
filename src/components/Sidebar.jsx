@@ -1,21 +1,16 @@
 import { Flex, Menu } from "antd";
-import { FaLeaf } from "react-icons/fa6";
-import {
-  UserOutlined,
-  ProfileOutlined,
-  LoginOutlined,
-  OrderedListOutlined,
-  CarryOutOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { GiDiceTarget } from "react-icons/gi";
+import { UserOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+import React from "react";
+import "./Sidebar.css"; // Importa el archivo CSS donde definiremos la animación
 
 export const Sidebar = () => {
   return (
     <>
-      <Flex align="center" justify="center">
-        <div className="logo">
-          <FaLeaf />
+      <Flex justify="center">
+        <div className="logo" style={{ fontSize: "7em" }}>
+          <GiDiceTarget className="dice-icon" />
         </div>
       </Flex>
       <Menu
@@ -26,12 +21,12 @@ export const Sidebar = () => {
           {
             key: "1",
             icon: <UserOutlined />,
-            label: <Link to="/">DnD</Link>,
+            label: <Link to="/">Create sheet</Link>,
           },
           {
             key: "2",
             icon: <UserOutlined />,
-            label: <Link to="/wod">WoD</Link>,
+            label: <Link to="/wod">All characters</Link>,
           },
           {
             key: "3",

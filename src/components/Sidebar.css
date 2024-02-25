@@ -1,0 +1,12 @@
+.dice-icon {
+  animation: spin 60s linear infinite; /* Hace girar la animación infinitamente */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
