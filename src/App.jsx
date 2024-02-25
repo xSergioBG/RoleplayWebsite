@@ -1,13 +1,13 @@
-//import React from 'react'
-import { Layout, Button, Flex } from "antd";
-import { useState } from "react";
-import { Sidebar } from "./components/Sidebar";
-import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
-import CustomHeader from "./components/Header";
-import "./App.css";
-import MainContent from "./components/MainContent";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Layout, Button, Flex } from "antd";
+import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
+import { useState } from "react";
+
+import { Sidebar } from "./components/Sidebar";
+import CustomHeader from "./components/Header";
+import MainContent from "./pages/MainContent";
 import Wod from "./pages/Wod";
+import "./App.css";
 
 const { Sider, Header, Content } = Layout;
 
@@ -39,8 +39,6 @@ const App = () => {
           <Content className="content">
             <Flex gap="large">
               {/* Definir las rutas aquí*/}
-              {/* <MainContent /> */}
-              {/* <SideContent /> */}
               <Routes>
                 <Route path="/" element={<MainContent />} />
                 <Route path="/wod" element={<Wod />} />
