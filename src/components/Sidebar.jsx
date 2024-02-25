@@ -8,6 +8,7 @@ import {
   CarryOutOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 export const Sidebar = () => {
   return (
@@ -25,32 +26,32 @@ export const Sidebar = () => {
           {
             key: "1",
             icon: <UserOutlined />,
-            label: "Dungeons & Dragons 5e",
+            label: <Link to="/">DnD</Link>,
           },
           {
             key: "2",
-            icon: <ProfileOutlined />,
-            label: "Vampire: The Masquerade 5e",
+            icon: <UserOutlined />,
+            label: <Link to="/wod">WoD</Link>,
           },
           {
             key: "3",
-            icon: <LoginOutlined />,
-            label: "User Management",
+            icon: <UserOutlined />,
+            label: "Pf2",
           },
           {
             key: "4",
-            icon: <OrderedListOutlined />,
-            label: "Tasks List",
+            icon: <UserOutlined />,
+            label: "Character Management",
           },
           {
             key: "5",
-            icon: <CarryOutOutlined />,
-            label: "Tasks Management",
+            icon: <UserOutlined />,
+            label: "Combat Tracker",
           },
           {
             key: "6",
-            icon: <SettingOutlined />,
-            label: "Settings",
+            icon: <UserOutlined />,
+            label: "Map Management",
           },
         ]}
       />
