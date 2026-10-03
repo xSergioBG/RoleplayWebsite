@@ -10,6 +10,8 @@ updates:
     ignore:
       - dependency-name: '*'
         update-types: ['version-update:semver-major']
+      - dependency-name: eslint-plugin-react-refresh
+        update-types: ['version-update:semver-minor']
     groups:
       compatible-updates:
         patterns: ['*']
